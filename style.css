@@ -1,0 +1,19 @@
+@font-face{
+  src: url(./fonts/PressStart2P-Regular.ttf);
+  font-family: P2P;
+}
+
+*{
+  font-family: P2P;
+}
+a{
+  text-decoration: none;
+}
+
+span.water-type{
+  color: blue;
+}
+
+span.ground-type{
+  color: brown;
+}
