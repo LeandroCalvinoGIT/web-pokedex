@@ -1,9 +1,13 @@
+/* FUENTES */
 @font-face{
   src: url(./fonts/PressStart2P-Regular.ttf);
   font-family: P2P;
 }
 
 *{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
   font-family: P2P;
 }
 
@@ -12,6 +16,7 @@ a:link, a:visited{
   text-decoration: none;
 }
 
+/* FONDO */
 body{
   /* Color */
   background-color: slateblue;
@@ -23,12 +28,17 @@ body{
   background-size: cover;
 }
 
+/* HEADER */
 header{
+  /* fondo */
   background-color: brown;
+  /* posicion */
   position: sticky;
-  top: 20px;
+  top: 0px;
+  /* orden */
 }
 
+/* SPANS PARA CADA TIPO */
 span.unkown-type{
   background-color: rgb(10, 10, 10);
   color: rgb(255, 255, 255);
@@ -48,10 +58,41 @@ span.electric-type{
   color: rgb(226, 173, 15);
 }
 
+/* POKEMON CARD */
 .pokemon-card{
-  width: 300px;
+  /* tamaño */
+  width: 350px;
+  height: 500px;
+  /* boxing */
   margin: 10px;
+  padding: 15px;
   border: 2px black solid;
   border-radius: 15px;
   box-shadow: 3px 3px 3px black;
+  /* fondo */
+  background-color: rgb(202, 27, 27);
+}
+
+.pokemon-card img{
+  width: 100%;
+  height: 75%;
+}
+
+.pokemon-card h3,.pokemon-card p{
+  padding: 5px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+/* FOOTER */
+footer{
+  /* fondo */
+  background-color: brown;
+  /* tamaño */
+  width: 100%;
+  height: 100px;
+  /* boxing */
+  margin: 0px;
+  /* texto */
+  text-align: center;
 }
