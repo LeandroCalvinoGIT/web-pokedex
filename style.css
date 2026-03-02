@@ -96,3 +96,14 @@ footer{
   /* texto */
   text-align: center;
 }
+
+footer img{
+  width: 100px;
+  border: 5px black outset;;
+}
+
+footer img:hover{
+  box-shadow: 10px -5px 10px black,  12px -1px 10px black;
+  position: relative;
+  right: 10px;
+}
