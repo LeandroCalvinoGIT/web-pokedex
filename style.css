@@ -1,14 +1,26 @@
-/* FUENTES */
+/* ----------------------------------------COLORES---------------------------------------- */
+:root{
+  --rojo-primario: #d53141;
+  --rojo-resaltado: #b92c3a;
+  --blanco-primario: #eeeeee;
+}
+
+/* ----------------------------------------FUENTES----------------------------------------*/
 @font-face{
   src: url(./fonts/PressStart2P-Regular.ttf);
   font-family: P2P;
 }
 
+/* ----------------------------------------UNIVERSAL---------------------------------------- */
 *{
+  /* RESETEO */
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+
+  /* TEXTO */
   font-family: P2P;
+  font-weight: 400;
 }
 
 a:link, a:visited{
@@ -16,7 +28,7 @@ a:link, a:visited{
   text-decoration: none;
 }
 
-/* FONDO */
+/* -------------------------------------------BODY---------------------------------------- */
 body{
   /* Color */
   background-color: slateblue;
@@ -31,15 +43,12 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-/* HEADER */
+/* ------------------------------------------HEADER---------------------------------------- */
 header{
-  /* tamaño */
-  width: auto;
   /* fondo */
-  background-color: brown;
+  background-color: var(--rojo-primario);
   /* posicion */
   position: sticky;
   top: 0px;
@@ -48,39 +57,69 @@ header{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
+  padding: 1%;
 }
 
-/* SPANS PARA CADA TIPO */
-span.unkown-type{
-  background-color: rgb(10, 10, 10);
-  color: rgb(255, 255, 255);
+/* -------------------------------------------NAV---------------------------------------- */
+nav{
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
 }
-span.water-type{
-  background-color: rgb(44, 47, 240);
-  color: rgb(191, 191, 236);
-}
-
-span.ground-type{
-  background-color: rgb(158, 63, 8);
-  color: rgb(233, 150, 83);
+nav img{
+  height: 30px;
 }
 
-span.electric-type{
-  background-color: rgb(230, 233, 73);
-  color: rgb(226, 173, 15);
+nav input{
+  width: 90%;
 }
 
-/* CARD CONTAINER */
-.card-container{
+#lupa{
+  padding: 1%;
+  background-color: var(--rojo-primario);
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+#lupa:hover{
+  background-color: var(--rojo-resaltado);
+}
+
+/* ------------------------------------------LOGO---------------------------------------- */
+.logo{
+  cursor: pointer;
+  /* Texto */
+  font-size: 120%;
+  /* flex */
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-
   justify-content: center;
   align-items: center;
 }
-/* POKEMON CARDS */
+
+.logo img{
+  height: 60px;
+}
+
+/* ---------------------------------------MAIN----------------------------------------- */
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --------------------------------CARD CONTAINER---------------------------------------- */
+.card-container{
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* -------------------------------------POKEMON CARDS--------------------------------------*/
 .pokemon-card{
   /* tamaño */
   width: 350px;
@@ -92,7 +131,7 @@ span.electric-type{
   border-radius: 15px;
   box-shadow: 3px 3px 3px black;
   /* fondo */
-  background-color: rgb(202, 27, 27);
+  background-color: var(--rojo-primario);
 }
 
 .pokemon-card img{
@@ -103,19 +142,23 @@ span.electric-type{
 .pokemon-card h3,.pokemon-card p{
   padding: 5px;
   border-radius: 15px;
-  background-color: white;
+  background-color: var(--blanco-primario);
 }
 
 .pokemon-card:hover{
-  box-shadow: 2px 2px 10px rgb(255, 255, 255);
-  position: relative;
-  right: 3px;
-  bottom: 3px;
+  box-shadow: 2px 2px 10px rgb(0, 0, 0);
+  background-color: var(--rojo-resaltado);
 }
-/* FOOTER */
+
+.pokemon-foto{
+  height: 700px;
+  width: 700px;
+}
+
+/* ---------------------------------------- FOOTER ----------------------------------------*/
 footer{
   /* fondo */
-  background-color: brown;
+  background-color: var(--rojo-primario);
   /* tamaño */
   width: 100%;
   height: 100px;
@@ -134,4 +177,24 @@ footer img:hover{
   box-shadow: 10px -5px 10px black,  12px -1px 10px black;
   position: relative;
   right: 10px;
+}
+
+/* ----------------------------------------SPANS PARA CADA TIPO---------------------------------------- */
+span.unkown-type{
+  background-color: rgb(10, 10, 10);
+  color: rgb(255, 255, 255);
+}
+span.water-type{
+  background-color: rgb(44, 47, 240);
+  color: rgb(191, 191, 236);
+}
+
+span.ground-type{
+  background-color: rgb(158, 63, 8);
+  color: rgb(233, 150, 83);
+}
+
+span.electric-type{
+  background-color: rgb(230, 233, 73);
+  color: rgb(226, 173, 15);
 }
